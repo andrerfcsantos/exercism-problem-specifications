@@ -8,7 +8,7 @@ jobs:
     name: All required files are present
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
       - name: All required files are present
         run: bin/check_required_files_present
@@ -17,13 +17,13 @@ jobs:
     name: No test has been mutated
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           path: "new"
 
       # Pull Requests
       - name: Checkout the target branch
-        uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: "${{ github.base_ref }}"
           path: "old"
@@ -39,7 +39,7 @@ jobs:
     name: Schema validation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
       - uses: actions/setup-node@270253e841af726300e85d718a5f606959b2903c
         with:
